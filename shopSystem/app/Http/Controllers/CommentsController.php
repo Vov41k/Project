@@ -15,13 +15,23 @@ class CommentsController extends Controller
 {
     public function create(Request $request, $id)
     {
-    
+        if(request('rating-input-1')==null){
+          $vote=5;
+          }else {
+            $vote=request('rating-input-1');
+        }
+        if(request('body')==null){
+          $msg="no msg";
+          } else {
+            $msg=request('body');
+        }
         if (Auth::user()->name == 'admin') {
+
             $comment = Comments::create([
                 'product_id' => $id,
                 'user_id'    => auth()->user()->id,
-                'body'       => request('body'),
-                'vote'       => request('rating-input-1'),
+                'body'       => $msg,
+                'vote'       => $vote,
                 'active'     => 1,
 
             ]);
@@ -29,8 +39,8 @@ class CommentsController extends Controller
             $comment = Comments::create([
                 'product_id' => $id,
                 'user_id'    => auth()->user()->id,
-                'body'       => request('body'),
-                'vote'       => request('rating-input-1'),
+                'body'       => $msg,
+                'vote'       => $vote,
 
             ]);
             Session::flash('Success', 'waiting for aproving');

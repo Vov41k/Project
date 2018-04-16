@@ -26,7 +26,7 @@ class CategoryController extends Controller
 
     public function store(CreateCategoryRequest $request)
     {
-        //dd($request);
+       
 
         $image        = $request->image;
         $data = $request->except('image');

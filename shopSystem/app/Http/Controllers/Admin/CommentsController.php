@@ -63,12 +63,23 @@ class CommentsController extends Controller
     {
 
         $idUser = Auth::user()->id;
+         if(request('rating-input-1')==null){
+        $vote=5;
+            }else {
+        $vote=request('rating-input-1');
+         }
+         if(request('body')==null){
+            $msg="no msg";
+         } else {
+            $msg=request('body');
+         }
+
         if (Auth::user()->name == 'admin') {
             Comments::create([
                 'user_id'    => $idUser,
                 'product_id' => $request->product_id,
-                'body'       => request('body'),
-                'vote'       => request('rating-input-1'),
+                'body'       => $msg,
+                'vote'       => $vote,
                 'active'     => 1,
 
             ]);
@@ -76,8 +87,8 @@ class CommentsController extends Controller
             Comments::create([
                 'user_id'    => $idUser,
                 'product_id' => $request->product_id,
-                'body'       => request('body'),
-                'vote'       => request('rating-input-1'),
+                'body'       => $msg,
+                'vote'       => $vote,
 
             ]);
         }

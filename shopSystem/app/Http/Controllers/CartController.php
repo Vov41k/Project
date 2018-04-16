@@ -32,7 +32,7 @@ class CartController extends Controller
 
         $product = Product::find($id);
         $options = ($request->except('_token'));
-//         dd($options);
+
 
         $name      = $product->title;
         $price     = $product->price;
@@ -58,7 +58,7 @@ class CartController extends Controller
 
 
         return redirect(route('cart'));
-//         return view('cart.index', compact('categories', 'cartcontent', 'count', 'total'));
+
 
     }
 

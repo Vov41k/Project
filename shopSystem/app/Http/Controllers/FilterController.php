@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
-//filtering products;
+
 class FilterController extends Controller
 {
        public function filter(Request $request, $id)

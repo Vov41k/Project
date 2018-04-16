@@ -25,7 +25,7 @@ class CategoryController extends Controller
 
         $bundle = BundleOptions::all();
         $price  = [];
-        // dd($bundle);
+      
         foreach ($products as $prod) {
             $price[] = $prod->price;
             foreach ($prod->bundle as $bundl) {
