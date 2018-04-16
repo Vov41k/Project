@@ -3,10 +3,18 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Mail;
 
 class User extends Authenticatable
 {
     use Notifiable;
+    public function sendPasswordResetNotification($token)
+{
+    Mail::send(['html' => 'email.password'], ['token' => $token], function ($message) {
+        $message->subject(' Password Reset Link');
+        $message->to($this->email);
+    });
+}
 
     protected $table = 'users';
 

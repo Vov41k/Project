@@ -41,6 +41,7 @@ Route::get('/news/{id}', 'NewsController@show')->name('showNews');
 Route::get('/contact', 'ContactController@index')->name('contact');
 Route::post('/contact', 'ContactController@send')->name('sendMessage');
 Route::get('/register/confirm/{token}','ConfirmationController@confirm');
+Route::get('/password/reset/{token}','ResetPasswordController@index');
 
 Auth::routes();
 
