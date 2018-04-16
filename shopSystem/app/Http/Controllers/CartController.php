@@ -21,7 +21,7 @@ class CartController extends Controller
         $total       = Cart::subtotal();
         $count       = Cart::count();
         
-//        dd(get_class_methods('Gloudemans\Shoppingcart\Cart'));
+
 
         return view('cart.index', compact('cartcontent', 'count', 'total'));
 
