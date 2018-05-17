@@ -1865,7 +1865,8 @@ h6.best2 {
   width: 48%;
 }
 .single-top-in {
-  width: 52%;
+  width:80%;
+  margin:0 auto;
 }
 .available ul li select {
   margin-left: 9%;
@@ -1887,7 +1888,7 @@ h6.best2 {
 }
 .grid-top {
   float: left;
-  width: 33.3%;
+  width: 49%;
 }
 .grid-mid {
   float: left;
@@ -1910,7 +1911,8 @@ h6.best2 {
   width: 50%;
 }
 .b-from-left {
-  min-height: 213px;
+  /*min-height: 213px;*/
+  min-height: 100%;
 }
 .b-from-top {
   min-height: 553px;
@@ -1964,7 +1966,7 @@ width:33.3%;
 .single-top-in {
   width: 100%;
   margin-left: 0%;
-    float: left;
+    /*float: left;*/
 }
 .single-top {
   width: 100%;
@@ -2021,7 +2023,8 @@ ul.callbacks_tabs.callbacks1_tabs {
   left: 42%;
 }
 .b-from-left {
-  min-height: 170px;
+  /*min-height: 170px;*/
+  min-height: 100%;
 }
 .top-in span {
   padding: 6.5em 0 0;
@@ -2096,7 +2099,8 @@ a.item_add p.number {
   font-size: 0.9em;
 }
 .b-from-left {
-  min-height: 440px;
+  /*min-height: 440px;*/
+  min-height: 100%;
 }
 .b-animate span {
   padding-top: 6em;
@@ -2379,7 +2383,8 @@ a.item_add p.number {
   font-size: 1.6em;
 }
 .b-from-left {
-  min-height: 247px;
+  /*min-height: 247px;*/
+  min-height: 100%;
 }
 .top-in span {
   padding: 2.5em 0 0;

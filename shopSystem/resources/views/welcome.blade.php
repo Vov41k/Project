@@ -65,6 +65,7 @@
         <br>
         <hr>
         <div class="row">
+            <div class="container">
                   @foreach($productsOrder as $key=>$product)
                   <div class="single-top-in simpleCart_shelfItem">
 
@@ -99,6 +100,7 @@
 
 
                     <div class="clearfix"> </div>
+                    </div>
         </div>
 
     </div>

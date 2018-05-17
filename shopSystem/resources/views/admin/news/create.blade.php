@@ -12,7 +12,8 @@
             </div>
         </div>
 
-    @if (count($errors) < 0)
+    @if (count($errors) > 0)
+   
         <div class="alert alert-danger">
             <strong>!!!!</strong> There were some problems with your input.<br><br>
             <ul>
